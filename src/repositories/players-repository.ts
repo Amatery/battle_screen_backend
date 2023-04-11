@@ -1,4 +1,4 @@
-import { InsertManyResult, ObjectId } from 'mongodb'
+import { DeleteResult, InsertManyResult, ObjectId } from 'mongodb'
 import { playersCollection } from '../database/database-config'
 import { PlayerViewModel } from '../models/PlayerModels/PlayerViewModel'
 
@@ -15,5 +15,8 @@ export const playersRepository = {
       { $set: { activeFriendRequest } },
     )
     return updatedPlayer.modifiedCount === 1
+  },
+  async deletePlayers(): Promise<DeleteResult> {
+    return playersCollection.deleteMany()
   },
 }
