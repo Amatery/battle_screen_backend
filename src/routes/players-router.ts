@@ -1,5 +1,4 @@
 import { Request, Response, Router } from 'express'
-import { ObjectId } from 'mongodb'
 import { playersService } from '../domain/players-service'
 import { validateFriendRequestBody } from '../middlewares/friend-request-body-validators'
 import { inputValidationMiddleware } from '../middlewares/input-validation-middleware'

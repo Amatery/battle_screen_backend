@@ -1,4 +1,3 @@
-import { ObjectId } from 'mongodb'
 import { generateTeams } from '../helpers/generate-data'
 import { PlayerViewModel } from '../models/PlayerModels/PlayerViewModel'
 import { playersRepository } from '../repositories/players-repository'
